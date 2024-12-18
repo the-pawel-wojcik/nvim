@@ -33,28 +33,20 @@ vim.opt.colorcolumn = "81"
 -- where is my python
 vim.g.python3_host_prog = '/home/pawel/Code/python/config/venv13.1/bin/python'
 
--- Buffers
-vim.cmd([[
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Buffers:
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" swich between available buffers:
-" TODO: plug it into telescope
-nnoremap <C-b> <Cmd>buffers<CR>:buffer<Space>
-
-" swich buffers without having to save them
-" set hidden
-
-""""""""
-set grepprg=rg\ --vimgrep\ --smart-case\ --follow
-]])
+-- TODO: plug it into telescope
+vim.keymap.set('n', '<space>b', '<cmd>buffers<CR>:buffer<space>')
+vim.opt.grepprg = 'rg --vimgrep --smart-case --follow'
 
 -- save the thing
-vim.cmd([[
-set sessionoptions-=terminal
-autocmd BufWinLeave *.C mkview
-autocmd BufWinEnter *.C silent loadview
-]])
+vim.opt.sessionoptions:remove('terminal')
+vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
+    pattern = { "*.cpp", ".c", "*.hpp", "*.h", "*.C" },
+    command = "mkview",
+})
+vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
+    pattern = { "*.cpp", ".c", "*.hpp", "*.h", "*.C" },
+    command = "silent loadview",
+})
 
 -- lsp logs
 vim.lsp.set_log_level("off")
