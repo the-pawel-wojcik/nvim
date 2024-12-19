@@ -12,8 +12,8 @@ vim.api.nvim_create_autocmd('TermOpen', {
   end,
 })
 
-
--- vim.keymap.set('t', '<Esc>', [[<C-\><C-N>]])
+vim.g.leader = " "
+vim.g.localleader = " "
 vim.keymap.set('n', '<leader>st', function()
   vim.cmd.new()
   vim.cmd.term()
@@ -21,6 +21,5 @@ vim.keymap.set('n', '<leader>st', function()
   vim.api.nvim_win_set_height(0, 8)
 end)
 
-
-require("config.lazy")
 require("config.set")
+require("config.lazy")

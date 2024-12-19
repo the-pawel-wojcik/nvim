@@ -40,12 +40,12 @@ vim.opt.grepprg = 'rg --vimgrep --smart-case --follow'
 -- save the thing
 vim.opt.sessionoptions:remove('terminal')
 vim.api.nvim_create_autocmd({ "BufWinLeave" }, {
-    pattern = { "*.cpp", ".c", "*.hpp", "*.h", "*.C" },
-    command = "mkview",
+  pattern = { "*.cpp", ".c", "*.hpp", "*.h", "*.C" },
+  command = "mkview",
 })
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
-    pattern = { "*.cpp", ".c", "*.hpp", "*.h", "*.C" },
-    command = "silent loadview",
+  pattern = { "*.cpp", ".c", "*.hpp", "*.h", "*.C" },
+  command = "silent loadview",
 })
 
 -- lsp logs
