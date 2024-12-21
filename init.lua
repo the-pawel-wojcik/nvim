@@ -23,3 +23,4 @@ end)
 
 require("config.set")
 require("config.lazy")
+vim.keymap.set("n", "-", "<cmd>Oil<cr>")
