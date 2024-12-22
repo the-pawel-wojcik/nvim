@@ -22,8 +22,8 @@ return {
 
       local builtin = require('telescope.builtin')
       vim.keymap.set('n', '<space>fh', builtin.help_tags)
-      vim.keymap.set('n', '<space>fd', builtin.find_files)
-      vim.keymap.set('n', '<M-j>', builtin.git_files)
+      vim.keymap.set('n', '<space>ff', builtin.find_files)
+      -- vim.keymap.set('n', '<M-j>', builtin.git_files)
       vim.keymap.set('n', '<space>en', function()
         builtin.find_files { cwd = vim.fn.stdpath('config') }
       end)
