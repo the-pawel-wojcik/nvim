@@ -21,14 +21,14 @@ return {
       require('telescope').load_extension('fzf')
 
       local builtin = require('telescope.builtin')
-      vim.keymap.set('n', '<space>fh', builtin.help_tags)
-      vim.keymap.set('n', '<space>ff', builtin.find_files)
+      vim.keymap.set('n', '<space><space>h', builtin.help_tags)
+      vim.keymap.set('n', '<space><space>f', builtin.find_files)
       -- vim.keymap.set('n', '<M-j>', builtin.git_files)
-      vim.keymap.set('n', '<space>en', function()
+      vim.keymap.set('n', '<space><space>c', function()
         builtin.find_files { cwd = vim.fn.stdpath('config') }
       end)
 
-      vim.keymap.set("n", "<space>ep", function()
+      vim.keymap.set("n", "<space><space>p", function()
         builtin.find_files {
           cwd = vim.fs.joinpath(vim.fn.stdpath('data'), "lazy")
         }
