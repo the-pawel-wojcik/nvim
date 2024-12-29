@@ -1,5 +1,5 @@
-vim.g.leader = " "
-vim.g.localleader = " "
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.opt.guicursor = ""
 
