@@ -26,6 +26,7 @@ require("lazy").setup({
     { "lervag/vimtex" },
     { "junegunn/vim-peekaboo" },
     { "PeterRincker/vim-argumentative" }, -- <, and >, shift arguments
+    { 'tpope/vim-unimpaired' },           -- yoz
     -- { "tpope/vim-commentary" }, -- this is now built into nvim
     -- { "tpope/vim-sensible" }, -- this is now built into nvim
     { import = "config.plugins" },
