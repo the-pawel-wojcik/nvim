@@ -6,8 +6,9 @@ return {
       require 'nvim-treesitter.configs'.setup {
         ensure_installed = {
           "cpp", "c", "lua", "vim", "vimdoc",
-          "python",
+          "python", "bash",
           "query",
+          "json",
           "markdown", "markdown_inline"
         },
 
