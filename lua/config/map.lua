@@ -2,7 +2,7 @@ vim.keymap.set("n", "<leader>e", "<cmd>source %<CR>")
 vim.keymap.set("n", "<M-j>", "<cmd>cnext<CR>")
 vim.keymap.set("n", "<M-k>", "<cmd>cprev<CR>")
 vim.keymap.set("n", "<leader>date",
-  "<cmd>r!date +'\\%a, \\%b, \\%dth, \\%Y' <bar> sed 's/\\([023]1\\)th/\\1st/' <bar> sed 's/\\([02]2\\)th/\\1nd/' <bar> sed 's/\\([02]3\\)th/\\1rd/' <CR>")
+  "<cmd>r!date +'\\%a, \\%b \\%dth, \\%Y' <bar> sed 's/\\([023]1\\)th/\\1st/' <bar> sed 's/\\([02]2\\)th/\\1nd/' <bar> sed 's/\\([02]3\\)th/\\1rd/' <CR>")
 -- Open the file manager in the directory containing current file
 vim.keymap.set("n", "<leader>w", "<cmd>!xdg-open %:p:h<CR>")
 
