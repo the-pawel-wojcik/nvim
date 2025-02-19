@@ -15,3 +15,13 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("x", "<leader>p", [["0P]])
 vim.keymap.set("x", "<leader>P", [["0P]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["+d]])
+
+-- work with wrapped lines
+if vim.opt.diff:get() == false then
+  -- Not fun in the diff mode
+  vim.keymap.set({ "n", "v" }, "j", "gj")
+  vim.keymap.set({ "n", "v" }, "k", "gk")
+  vim.keymap.set({ "n", "v" }, "0", "g0")
+  vim.keymap.set({ "n", "v" }, "$", "g$")
+end
+-- vim.keymap.set({ "n" }, "V", "mhg0vg$`h")
