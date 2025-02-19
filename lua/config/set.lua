@@ -55,3 +55,10 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 vim.lsp.set_log_level("off")
 -- if I ever really need it:
 -- vim.lsp.set_log_level("debug")
+
+vim.opt.updatetime = 1000
+vim.cmd([[
+augroup vimrc_example | au!
+autocmd CursorHoldI * stopinsert
+augroup end
+]])
