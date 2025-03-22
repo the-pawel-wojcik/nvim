@@ -4,6 +4,8 @@ vim.g.vimtex_format_enabled = 1
 vim.opt.textwidth = 79
 
 vim.keymap.set("n", "<leader>wc", "<cmd>VimtexCountWords<CR>")
+vim.keymap.set("n", "<leader>f", "gwap")
+vim.keymap.set("x", "<leader>f", "gw")
 
 vim.cmd([[
 " set conceallevel=2
