@@ -67,3 +67,13 @@ inoremap <C-z> <C-r>=ZoteroCite()<CR>
 --
 -- vim.keymap.set('n', '<leader>z', '"=ZoteroCite()<CR>p', {})
 -- vim.keymap.set('i', '<C-z>', '<C-r>=ZoteroCite()<CR>')
+
+-- work with wrapped lines
+if vim.opt.diff:get() == false then
+  -- Not fun in the diff mode
+  vim.keymap.set({ "n", "v" }, "j", "gj")
+  vim.keymap.set({ "n", "v" }, "k", "gk")
+  vim.keymap.set({ "n", "v" }, "0", "g0")
+  vim.keymap.set({ "n", "v" }, "$", "g$")
+end
+-- vim.keymap.set({ "n" }, "V", "mhg0vg$`h")
