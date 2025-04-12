@@ -35,31 +35,38 @@ return {
         function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
       vim.keymap.set("n", "]d",
         function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
-      vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts)
-      vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, opts)
-      vim.keymap.set("n", "<M-h>", function() vim.lsp.buf.signature_help() end, opts)
-
-      vim.api.nvim_create_autocmd(
-        'LspAttach',
-        {
-          callback = function(args)
-            local client = vim.lsp.get_client_by_id(args.data.client_id)
-            if not client then return end
-
-            if client.supports_method('textDocument/formatting', 0) then
-              vim.api.nvim_create_autocmd(
-                'BufWritePre',
-                {
-                  buffer = args.buf,
-                  callback = function()
-                    vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
-                  end,
-                }
-              )
-            end
-          end
-        }
+      vim.keymap.set(
+        "n", "<leader>ca", function() vim.lsp.buf.code_action() end, opts
       )
+      vim.keymap.set(
+        "n", "<leader>rn", function() vim.lsp.buf.rename() end, opts
+      )
+      vim.keymap.set(
+        "n", "<M-h>", function() vim.lsp.buf.signature_help() end, opts
+      )
+
+      -- Save triggers format
+      -- vim.api.nvim_create_autocmd(
+      --   'LspAttach',
+      --   {
+      --     callback = function(args)
+      --       local client = vim.lsp.get_client_by_id(args.data.client_id)
+      --       if not client then return end
+      --
+      --       if client.supports_method('textDocument/formatting', 0) then
+      --         vim.api.nvim_create_autocmd(
+      --           'BufWritePre',
+      --           {
+      --             buffer = args.buf,
+      --             callback = function()
+      --               vim.lsp.buf.format({ bufnr = args.buf, id = client.id })
+      --             end,
+      --           }
+      --         )
+      --       end
+      --     end
+      --   }
+      -- )
     end,
   }
 }

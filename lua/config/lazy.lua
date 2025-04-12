@@ -15,6 +15,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     os.exit(1)
   end
 end
+
+-- this where repos go
 vim.opt.rtp:prepend(lazypath)
 
 -- Setup lazy.nvim
