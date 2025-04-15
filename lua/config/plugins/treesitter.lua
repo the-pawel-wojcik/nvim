@@ -13,7 +13,10 @@ return {
           "markdown", "markdown_inline"
         },
 
+        modules = {},
         auto_install = false,
+        sync_install = false,
+        ignore_install = {},
 
         highlight = {
           enable = true,
