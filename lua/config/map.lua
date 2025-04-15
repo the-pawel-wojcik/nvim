@@ -16,3 +16,9 @@ vim.keymap.set("n", "<leader>Y", [["+Y]])
 vim.keymap.set("x", "<leader>p", [["0P]])
 vim.keymap.set("x", "<leader>P", [["0P]])
 vim.keymap.set({ "n", "v" }, "<leader>d", [["+d]])
+vim.keymap.set({"i"}, "jk", "<Esc>")
+vim.keymap.set({"i"}, "kj", "<Esc>")
+-- vim.api.nvim_set_keymap(
+--   'i', '<C-CapsLock>', '<Esc>', { noremap = true, silent = true }
+-- )
+
