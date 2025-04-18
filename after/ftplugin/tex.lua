@@ -27,6 +27,7 @@ let g:vimtex_syntax_conceal = {
 
 let g:vimtex_quickfix_ignore_filters = [
   \ 'Overfull',
+  \ 'Underfull',
   \ 'Token not allowed',
   \]
 
