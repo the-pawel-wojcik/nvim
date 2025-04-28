@@ -4,7 +4,7 @@ vim.keymap.set("n", "<leader>ce", "<cmd>!cd ..; make run RUN=%:t:r<CR>")
 -- cmake build & execute
 vim.keymap.set(
   "n", "<leader>cb",
-  "<cmd>w<CR><cmd>!cd ..; make compile; make run RUN=%:t:r<CR>"
+  "<cmd>w<CR><cmd>!cd ..; make compile RUN=%:t:r; make run RUN=%:t:r<CR>"
 )
 -- cmake clean, configure, build, & execute
 vim.keymap.set("n", "<leader>cc", "<cmd>w<CR><cmd>!cd ..; make clean; make configure; make compile; make run RUN=%:t:r<CR>")
