@@ -33,6 +33,7 @@ let g:vimtex_quickfix_ignore_filters = [
   \ 'Missing character: There is no =',
   \ 'Package nameref Warning: The definition of',
   \ 'Package hyperref Warning: Height of page',
+  \ 'LaTeX Warning: `!h',
   \]
 
 nmap dsm <Plug>(vimtex-env-delete-math)
