@@ -83,3 +83,11 @@ if vim.opt.diff:get() == false then
   vim.keymap.set({ "n", "v" }, "$", "g$")
 end
 -- vim.keymap.set({ "n" }, "V", "mhg0vg$`h")
+
+vim.keymap.set('n', '<leader><leader>t', [===[i\documentclass{article}
+\usepackage{amsmath, amssymb, physics}
+\title{}
+\author{Pawe\l{} W{\'o}jcik}
+\begin{document}
+\maketitle
+\end{document}O]===])
