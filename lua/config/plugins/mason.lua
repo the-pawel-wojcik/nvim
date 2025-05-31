@@ -1,12 +1,6 @@
 return {
   {
     "williamboman/mason.nvim",
-    -- This seems to be some sort of scam
-    -- opts = {
-    --   ensure_installed = {
-    --     "pyright",
-    --   }
-    -- },
     dependencies = {
       {
         "williamboman/mason-lspconfig.nvim",
@@ -15,6 +9,9 @@ return {
     config = function()
       require('mason').setup()
       require('mason-lspconfig').setup()
+      -- require('mason-lspconfig').setup({
+      --   automatic_enable = false
+      -- })
     end,
     lazy = false,
   }
