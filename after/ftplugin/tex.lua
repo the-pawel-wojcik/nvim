@@ -53,7 +53,7 @@ xmap im <Plug>(vimtex-i$)
 
 " ** Zotero integration **
 function! ZoteroCite()
-  let format = 'cite'
+  let format = 'autocite'
   let api_call = 'http://127.0.0.1:23119/better-bibtex/cayw?format='.format.'&brackets=1'
   let ref = system('curl -s '.shellescape(api_call))
   return ref
