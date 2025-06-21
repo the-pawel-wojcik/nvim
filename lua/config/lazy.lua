@@ -22,12 +22,6 @@ vim.opt.rtp:prepend(lazypath)
 -- Setup lazy.nvim
 require("lazy").setup({
   spec = {
-    {
-      "the-pawel-wojcik/vim-cfour",
-      config = function()
-        vim.g.cfour_fold = 1
-      end,
-    },
     { "tpope/vim-fugitive" },
     { "junegunn/vim-peekaboo" },
     { "lervag/vimtex" },
